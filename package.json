@@ -13,7 +13,8 @@
     "medusa"
   ],
   "scripts": {
-    "docker:up": "docker compose up --build -d",
+    "docker:up": "docker compose up -d",
+    "docker:upbuild": "docker compose up --build -d",
     "docker:down": "docker compose down",
     "docker:createuser": "docker compose run --rm medusa pnpm medusa user -e admin@example.com -p supersecret",
     "build": "medusa build",
@@ -22,7 +23,8 @@
     "dev": "medusa develop",
     "test:integration:http": "TEST_TYPE=integration:http NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
     "test:integration:modules": "TEST_TYPE=integration:modules NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
-    "test:unit": "TEST_TYPE=unit NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit"
+    "test:unit": "TEST_TYPE=unit NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit",
+    "showlogs": "docker compose logs -f medusa"
   },
   "dependencies": {
     "@medusajs/admin-sdk": "2.13.1",
