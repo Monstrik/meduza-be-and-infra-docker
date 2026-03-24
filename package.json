@@ -13,6 +13,9 @@
     "medusa"
   ],
   "scripts": {
+    "docker:up": "docker compose up --build -d",
+    "docker:down": "docker compose down",
+    "docker:createuser": "docker compose run --rm medusa pnpm medusa user -e admin@example.com -p supersecret",
     "build": "medusa build",
     "seed": "medusa exec ./src/scripts/seed.ts",
     "start": "medusa start",
@@ -46,5 +49,6 @@
   },
   "engines": {
     "node": ">=20"
-  }
+  },
+  "packageManager": "pnpm@10.32.1"
 }
