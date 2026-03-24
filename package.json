@@ -14,9 +14,11 @@
   ],
   "scripts": {
     "docker:up": "docker compose up -d",
-    "docker:upbuild": "docker compose up --build -d",
     "docker:down": "docker compose down",
+    "docker:upbuild": "docker compose up --build -d",
+    "docker:downclean": "docker compose down -v",
     "docker:createuser": "docker compose run --rm medusa pnpm medusa user -e admin@example.com -p supersecret",
+    "docker:createuser1": "docker compose exec medusa pnpm medusa user -e admin@example.com -p supersecret",
     "build": "medusa build",
     "seed": "medusa exec ./src/scripts/seed.ts",
     "start": "medusa start",
