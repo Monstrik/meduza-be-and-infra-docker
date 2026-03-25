@@ -27,6 +27,7 @@ module.exports = defineConfig({
                 server: {
                     host: "0.0.0.0",
                     allowedHosts: [
+                        "meduza-shop.up.railway.app",
                         "localhost",
                         ".localhost",
                         "127.0.0.1",
