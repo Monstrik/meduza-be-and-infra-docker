@@ -4,6 +4,7 @@ loadEnv(process.env.NODE_ENV || "development", process.cwd())
 
 module.exports = defineConfig({
     projectConfig: {
+        // workerMode: process.env.WORKER_MODE || "shared",
         databaseUrl: process.env.DATABASE_URL,
         databaseDriverOptions: {
             ssl: false,
@@ -19,6 +20,7 @@ module.exports = defineConfig({
         }
     },
     admin: {
+        disable: process.env.ADMIN_DISABLED === "true" || false,
         // Configure Vite for Docker environment
         vite: (config) => {
             return {
