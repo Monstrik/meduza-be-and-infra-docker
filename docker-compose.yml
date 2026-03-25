@@ -16,7 +16,7 @@ services:
   medusa:
     build: .
     container_name: medusa_backend
-    command: pnpm start
+    command: ./start.sh
     depends_on:
       - postgres
       - redis
