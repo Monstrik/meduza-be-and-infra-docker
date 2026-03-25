@@ -3,6 +3,8 @@
 echo "Running database migrations..."
 pnpm medusa db:migrate
 
+cd .medusa/server || exit
+
 # Seed only on first run
 SEED_MARKER=".seeded"
 if [ ! -f "$SEED_MARKER" ]; then
