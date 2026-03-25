@@ -12,5 +12,5 @@ else
   echo "Database already seeded, skipping..."
 fi
 
-echo "Starting Medusa development server..."
-pnpm dev
+echo "Starting Medusa server..."
+pnpm start
