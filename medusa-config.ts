@@ -20,7 +20,7 @@ module.exports = defineConfig({
         }
     },
     admin: {
-        disable: process.env.ADMIN_DISABLED === "true" || false,
+        // disable: process.env.ADMIN_DISABLED === "true" || false,
         // Configure Vite for Docker environment
         vite: (config) => {
             return {
