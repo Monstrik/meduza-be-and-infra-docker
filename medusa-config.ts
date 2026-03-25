@@ -9,6 +9,7 @@ module.exports = defineConfig({
             ssl: false,
             sslmode: "disable",
         },
+        redisUrl: process.env.REDIS_URL || "redis://localhost:6379",
         http: {
             storeCors: process.env.STORE_CORS!,
             adminCors: process.env.ADMIN_CORS!,
