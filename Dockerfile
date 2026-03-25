@@ -5,10 +5,9 @@ RUN npm install -g pnpm
 WORKDIR /server
 
 COPY package.json pnpm-lock.yaml ./
+COPY . .
 RUN pnpm install
 RUN pnpm build
-
-COPY . .
 
 EXPOSE 9000
 EXPOSE 5173
