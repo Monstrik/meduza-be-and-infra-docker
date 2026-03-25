@@ -24,7 +24,7 @@ services:
       - medusa_network
 
   medusa:
-    build: .
+    build: Dockerfile.dev
     container_name: medusa_backend
     restart: unless-stopped
     depends_on:
