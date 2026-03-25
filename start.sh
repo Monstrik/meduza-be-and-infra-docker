@@ -13,4 +13,4 @@ else
 fi
 
 echo "Starting Medusa development server..."
-pnpm dev
+pnpm start
