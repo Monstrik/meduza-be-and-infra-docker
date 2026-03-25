@@ -13,6 +13,7 @@
     "medusa"
   ],
   "scripts": {
+    "predeploy": "medusa db:migrate",
     "docker:up": "docker compose up -d",
     "docker:down": "docker compose down",
     "docker:upbuild": "docker compose up --build -d",
